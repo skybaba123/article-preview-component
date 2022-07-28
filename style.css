@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "Big Shoulders Display", cursive; */
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+  flex-wrap: wrap;
+}
+
+.drawer {
+  height: 300px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container {
+  height: 300px;
+  background-color: #fff;
+  width: 450px;
+  border-radius: 0 10px 10px 0;
+  padding: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.main-para {
+  color: hsl(217, 19%, 35%);
+  font-size: 23px;
+  margin-bottom: 1rem;
+}
+
+.second-para {
+  color: hsl(212, 23%, 69%);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.bio-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.michelle {
+  display: flex;
+  gap: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.name-date {
+  transform: translateY(0.5rem);
+}
+
+.name-date h2 {
+  color: hsl(217, 19%, 35%);
+  font-size: 16px;
+}
+
+.name-date p {
+  color: hsl(212, 23%, 69%);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.share-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transform: translateY(0.4rem);
+  background-color: rgba(143, 143, 143, 0.486);
+}
+
+.share-icon img {
+  height: 20px;
+  width: 20px;
+}
+
+.share-popup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1rem;
+  bottom: 3.5rem;
+}
+
+.share-popup-hidden {
+  display: none;
+}
+
+.share-popup div {
+  z-index: -1;
+  top: 1rem;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 50px solid hsl(217, 19%, 35%);
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+
+.share-popup p {
+  color: rgba(255, 255, 255, 0.692);
+  font-size: 10px;
+  letter-spacing: 10px;
+}
+
+@media only screen and (max-width: 841px) {
+  .drawer {
+    width: 450px;
+    border-radius: 10px 10px 0 0;
+  }
+  .container {
+    border-radius: 0 0 10px 10px;
+    margin-top: -12.2rem;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .drawer {
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+    height: fit-content;
+  }
+
+  .share-popup {
+    width: 1150%;
+    padding-right: 100px;
+    height: 80px;
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+    transform: translateX(-9.5rem) translateY(6rem);
+  }
+
+  .share-popup div {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .share-popup {
+    width: 355.5px;
+    height: 80px;
+
+    transform: translateX(-8.2rem) translateY(6rem);
+  }
+}
